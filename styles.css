@@ -44,7 +44,7 @@ body {
     border-radius: 30px;
     padding: 8px 16px;
     background: rgb(15, 55, 255);
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     font-family: 'Orbitron';
 }
@@ -54,7 +54,7 @@ body {
     border-radius: 30px;
     padding: 8px 16px;
     background: rgb(0, 127, 88);
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     font-family: 'Orbitron';
 }
@@ -64,7 +64,7 @@ body {
     border-radius: 30px;
     padding: 8px 16px;
     background: rgb(152, 152, 152);
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     font-family: 'Orbitron';
 }
@@ -73,7 +73,7 @@ body {
     border-radius: 30px;
     padding: 8px 16px;
     background: rgb(201, 139, 139);
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     font-family: 'Orbitron';
 }
