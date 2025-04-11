@@ -28,15 +28,15 @@ body {
     margin-bottom: 12px;
 }
 .minute, .second {
-    font-size: 38px;
+    font-size: 44px;
 }
 
 .milisecond {
-    font-size: 26px;
+    font-size: 32px;
 }
 
 .two-points {
-    font-size: 22px;
+    font-size: 38px;
 }
 
 .start-button {
