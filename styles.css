@@ -11,6 +11,7 @@
 body {
     background:rgb(34, 34, 34);
     font-family: "Orbitron", sans-serif;
+    color: white;
 }
 
 .wrapper {
@@ -20,7 +21,6 @@ body {
 }
 
 .title {
-    color: white;
     margin-bottom: 12px;
 }
 
@@ -28,17 +28,14 @@ body {
     margin-bottom: 12px;
 }
 .minute, .second {
-    color: white;
     font-size: 25px;
 }
 
 .milisecond {
-    color: white;
     font-size: 22px;
 }
 
 .two-points {
-    color: white;
     font-size: 22px;
 }
 
@@ -48,7 +45,6 @@ body {
     padding: 8px 16px;
     background: rgb(15, 55, 255);
     font-size: 16px;
-    color: white;
     cursor: pointer;
     font-family: 'Orbitron';
 }
@@ -59,7 +55,6 @@ body {
     padding: 8px 16px;
     background: rgb(152, 152, 152);
     font-size: 16px;
-    color: white;
     cursor: pointer;
     font-family: 'Orbitron';
 }
@@ -69,7 +64,6 @@ body {
     padding: 8px 16px;
     background: rgb(201, 139, 139);
     font-size: 16px;
-    color: white;
     cursor: pointer;
     font-family: 'Orbitron';
 }
