@@ -49,6 +49,16 @@ body {
     font-family: 'Orbitron';
 }
 
+.continue-button {
+    margin-right: 12px;
+    border-radius: 30px;
+    padding: 8px 16px;
+    background: rgb(0, 127, 88);
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Orbitron';
+}
+
 .stop-button {
     margin-right: 12px;
     border-radius: 30px;

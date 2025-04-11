@@ -1,4 +1,5 @@
 const startButton = document.querySelector(".start-button")
+const contButton = document.querySelector(".continue-button")
 const stopButton = document.querySelector(".stop-button")
 const resetButton = document.querySelector(".reset-button")
 const timeInitialMiliSecond = document.querySelector(".milisecond")
@@ -9,6 +10,7 @@ let startNumber = 0
 
 stopButton.style.display = "none"
 resetButton.style.display = "none"
+contButton.style.display = "none"
 
 function actionStart() {
     if (stopWatch) return
@@ -18,12 +20,25 @@ function actionStart() {
     }, 10);
     stopButton.style.display = ""
     resetButton.style.display = ""
+    contButton.style.display = "none"
+    startButton.style.display = "none"
     
+}
+
+function actionContinue() {
+    stopWatch = setInterval(function() {
+        startNumber++
+        timeInitialMiliSecond.innerHTML = startNumber.toString().padStart(3, "0")
+    }, 10);
+    stopButton.style.display = ""
+    contButton.style.display = "none"
 }
 
 function actionStop() {
     clearInterval(stopWatch)
     stopWatch = null
+    stopButton.style.display = "none"
+    contButton.style.display = ""
 }
 
 function actionReset() {
@@ -33,12 +48,12 @@ function actionReset() {
     timeInitialMiliSecond.innerHTML = "000"
     stopButton.style.display = "none"
     resetButton.style.display = "none"
-    startButton.style.backgroundColor = "#0f37ff"
+    contButton.style.display = "none"
+    startButton.style.display = ""
 }
 
 function changeButtonStart() {
-    startButton.innerHTML = "Continuar"
-    startButton.style.backgroundColor = "#007f58"
+    startButton.innerHTML = "Iniciar"
 }
 
 function changeButtonContinue() {
@@ -59,3 +74,5 @@ stopButton.addEventListener("click", () => {
     actionStop()
     changeButtonStart()
 })
+
+contButton.addEventListener("click", actionContinue)
