@@ -77,3 +77,12 @@ body {
     cursor: pointer;
     font-family: 'Orbitron';
 }
+
+.button-effect {
+    transition: ease-in-out 0.4s;
+}
+
+.button-effect:hover {
+    transform: translateY(-4px);
+    opacity: 0.8;
+}
