@@ -28,11 +28,11 @@ body {
     margin-bottom: 12px;
 }
 .minute, .second {
-    font-size: 32px;
+    font-size: 38px;
 }
 
 .milisecond {
-    font-size: 25px;
+    font-size: 26px;
 }
 
 .two-points {
