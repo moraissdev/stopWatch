@@ -16,10 +16,8 @@ contButton.style.display = "none"
 
 function actionStart() {
     if (stopWatch) return
-    stopWatch = setInterval(function() {
-        startNumberMiliSecond++
-        timeInitialMiliSecond.innerHTML = startNumberMiliSecond.toString().padStart(3, "0")
-    }, 10);
+    stopWatch = setInterval(updateStopWatch, 10)
+
     stopButton.style.display = ""
     resetButton.style.display = ""
     contButton.style.display = "none"
@@ -28,10 +26,7 @@ function actionStart() {
 }
 
 function actionContinue() {
-    stopWatch = setInterval(function() {
-        startNumberMiliSecond++
-        timeInitialMiliSecond.innerHTML = startNumberMiliSecond.toString().padStart(3, "0")
-    }, 10);
+    stopWatch = setInterval(updateStopWatch, 10)
     stopButton.style.display = ""
     contButton.style.display = "none"
 }
@@ -47,11 +42,34 @@ function actionReset() {
     clearInterval(stopWatch)
     stopWatch = null
     startNumberMiliSecond = 0
+    startNumberSecond = 0
+    startNumberMinute = 0
     timeInitialMiliSecond.innerHTML = "000"
+    timeInitialSecond.innerHTML = "00"
+    timeInitialMinute.innerHTML = "00"
     stopButton.style.display = "none"
     resetButton.style.display = "none"
     contButton.style.display = "none"
     startButton.style.display = ""
+}
+
+function updateStopWatch() {
+    startNumberMiliSecond += 10
+
+    if (startNumberMiliSecond >= 1000) {
+        startNumberSecond++
+        startNumberMiliSecond = 0
+    }
+
+    if (startNumberSecond >= 60) {
+        startNumberMinute++
+        startNumberSecond = 0
+        startNumberMiliSecond = 0
+    }
+
+    timeInitialMiliSecond.innerHTML = startNumberMiliSecond.toString().padStart(3, "0")
+    timeInitialSecond.innerHTML = startNumberSecond.toString().padStart(2, "0")
+    timeInitialMinute.innerHTML = startNumberMinute.toString().padStart(2, "0")    
 }
 
 startButton.addEventListener("click", () => {
