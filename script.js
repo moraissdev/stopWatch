@@ -52,27 +52,18 @@ function actionReset() {
     startButton.style.display = ""
 }
 
-function changeButtonStart() {
-    startButton.innerHTML = "Iniciar"
-}
-
-function changeButtonContinue() {
-    startButton.innerHTML = "Iniciar"
-}
-
 startButton.addEventListener("click", () => {
     actionStart()
-    changeButtonStart()
 })
 
 resetButton.addEventListener("click", () => {
     actionReset()
-    changeButtonContinue()
 })
 
 stopButton.addEventListener("click", () => {
     actionStop()
-    changeButtonStart()
 })
 
-contButton.addEventListener("click", actionContinue)
+contButton.addEventListener("click", () => {
+    actionContinue()
+})
