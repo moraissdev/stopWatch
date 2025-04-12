@@ -6,7 +6,9 @@ const timeInitialMiliSecond = document.querySelector(".milisecond")
 const timeInitialSecond = document.querySelector(".second")
 const timeInitialMinute = document.querySelector(".minute")
 let stopWatch
-let startNumber = 0
+let startNumberMiliSecond = 0
+let startNumberSecond = 0
+let startNumberMinute = 0
 
 stopButton.style.display = "none"
 resetButton.style.display = "none"
@@ -15,8 +17,8 @@ contButton.style.display = "none"
 function actionStart() {
     if (stopWatch) return
     stopWatch = setInterval(function() {
-        startNumber++
-        timeInitialMiliSecond.innerHTML = startNumber.toString().padStart(3, "0")
+        startNumberMiliSecond++
+        timeInitialMiliSecond.innerHTML = startNumberMiliSecond.toString().padStart(3, "0")
     }, 10);
     stopButton.style.display = ""
     resetButton.style.display = ""
@@ -27,8 +29,8 @@ function actionStart() {
 
 function actionContinue() {
     stopWatch = setInterval(function() {
-        startNumber++
-        timeInitialMiliSecond.innerHTML = startNumber.toString().padStart(3, "0")
+        startNumberMiliSecond++
+        timeInitialMiliSecond.innerHTML = startNumberMiliSecond.toString().padStart(3, "0")
     }, 10);
     stopButton.style.display = ""
     contButton.style.display = "none"
@@ -44,7 +46,7 @@ function actionStop() {
 function actionReset() {
     clearInterval(stopWatch)
     stopWatch = null
-    startNumber = 0
+    startNumberMiliSecond = 0
     timeInitialMiliSecond.innerHTML = "000"
     stopButton.style.display = "none"
     resetButton.style.display = "none"
