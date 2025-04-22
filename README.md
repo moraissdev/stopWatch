@@ -6,6 +6,10 @@
 
 ###
 
+<h3 align="center">👨🏻‍💻 Notebook e PC:</h3>
+
+###
+
 <div align="center">
   <img height="400" src="https://i.imgur.com/dbzed49.png"  />
 </div>
@@ -22,7 +26,7 @@
 
 ###
 
-<h3 align="left">🌐 Site Responsivo para Web & Mobile:</h3>
+<h3 align="left">🌐 Site Responsivo para Mobile:</h3>
 
 ###
 
